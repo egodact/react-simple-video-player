@@ -1,3 +1,8 @@
+# Version 0.2.2
+Released 2018-02-02
+
+- Removed glamorous support because it causes duplicate glamor instances
+
 # Version 0.2.1
 Released 2018-02-02
 

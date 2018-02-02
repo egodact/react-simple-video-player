@@ -49,9 +49,7 @@ export default class VideoPlayer extends PureComponent {
     height: PropTypes.number,
     autosize: PropTypes.bool,
     autoplay: PropTypes.bool,
-    aspectRatio: PropTypes.string,
-    className: PropTypes.string,
-    css: PropTypes.object
+    aspectRatio: PropTypes.string
   };
 
   static defaultProps = {
@@ -90,12 +88,10 @@ export default class VideoPlayer extends PureComponent {
 
   render = () => {
     const playing = this.state.playing;
-    const { autosize, className, css } = this.props;
+    const autosize = this.props.autosize;
     return (
       <Player
         autosize={autosize}
-        className={className}
-        css={css}
         onMouseOver={this.onMouseOver}
         onMouseLeave={this.onMouseLeave}
       >
