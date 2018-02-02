@@ -22,7 +22,7 @@ const overlayStyles = {
 };
 
 const Overlay = glamorous.div(overlayStyles, {
-  backgroundColor: 'rgba(0, 0, 0, .24)',
+  backgroundColor: 'rgba(0, 0, 0, .5)',
   opacity: 0,
   transition: 'all 450ms cubic-bezier(.23, 1, .32, 1) 0ms',
   cursor: 'pointer'

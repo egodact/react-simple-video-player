@@ -1,7 +1,7 @@
 {
   "name": "react-simple-video-player",
   "version": "0.1.0",
-  "description": "React component for rendering a simple, material design style video player",
+  "description": "A simple, material design video player component for React",
   "repository": {
     "type": "git",
     "url": "https://github.com/rafaelklaessen/react-simple-video-player.git"
