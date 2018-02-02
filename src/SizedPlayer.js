@@ -8,7 +8,7 @@ const PlayerContainer = glamorous.div(({ width, height, autosize }) => {
   return { width, height };
 });
 
-const parseAspectRatio = (aspectRatio) => {
+export const parseAspectRatio = (aspectRatio) => {
   const ratioArr = aspectRatio.split(':');
   const ratio = ratioArr.map(str => Number(str));
   if (ratio.length !== 2 || Number.isNaN(ratio[0]) || Number.isNaN(ratio[1])) {

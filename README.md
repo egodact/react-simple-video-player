@@ -71,5 +71,5 @@ Notice that when an invalid `aspectRatio` is given, it'll be ignored.
 
 ## Notes
 `react-simple-video-player` is built on top of `react-player`.
-##### This project does *not* aim to provide a customisable video player.
+#### This project does *not* aim to provide a customisable video player.
 Please use [react-player](https://www.npmjs.com/package/react-player) when you need customisability.
