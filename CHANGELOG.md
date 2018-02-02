@@ -1,3 +1,8 @@
+# Version 0.2.0
+Released 2018-02-02
+
+- Added tests
+
 # Version 0.1.1
 Released 2018-02-02
 
