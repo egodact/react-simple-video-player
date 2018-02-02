@@ -13,22 +13,24 @@ const Player = glamorous.div({
   if (autosize) return { width: '100%', height: '100%' };
 });
 
-const Overlay = glamorous.div({
+const overlayStyles = {
   position: 'absolute',
   top: 0,
   left: 0,
   width: '100%',
-  height: '100%',
+  height: '100%'
+};
+
+const Overlay = glamorous.div(overlayStyles, {
   backgroundColor: 'rgba(0, 0, 0, .24)',
   opacity: 0,
   transition: 'all 450ms cubic-bezier(.23, 1, .32, 1) 0ms',
-  cursor: 'pointer',
-  ':hover': {
-    opacity: 1
-  }
+  cursor: 'pointer'
 }, ({ shown }) => {
   if (shown) return { opacity: 1 };
 });
+
+const InnerOverlay = glamorous.div(overlayStyles);
 
 const PlayButton = glamorous.div({
   position: 'absolute',
@@ -54,24 +56,54 @@ export default class VideoPlayer extends PureComponent {
     autoplay: false
   };
 
-  state = { playing: this.props.autoplay };
+  state = {
+    playing: this.props.autoplay,
+    overlayShown: !this.props.autoplay
+  };
 
-  onPlay = () => this.setState({ playing: true });
-  onPause = () => this.setState({ playing: false });
+  onPlay = () => {
+    this.setState({
+      playing: true,
+      overlayShown: false
+    });
+  };
+
+  onPause = () => {
+    this.setState({
+      playing: false,
+      overlayShown: true
+    });
+  };
+
+  onMouseOver = () => this.setState({ overlayShown: true });
+
+  onMouseLeave = () => {
+    if (!this.state.playing) {
+      this.setState({ overlayShown: true });
+      return;
+    };
+
+    this.setState({ overlayShown: false });
+  };
 
   render = () => {
     const playing = this.state.playing;
     const autosize = this.props.autosize;
     return (
-      <Player autosize={autosize}>
+      <Player
+        autosize={autosize}
+        onMouseOver={this.onMouseOver}
+        onMouseLeave={this.onMouseLeave}
+      >
         <SizedPlayer playing={playing} {...this.props} />
         <Overlay
-          shown={!playing}
+          shown={this.state.overlayShown}
           onClick={playing ? this.onPause : this.onPlay}
         >
           <PlayButton>
             {playing ? <PauseIcon /> : <PlayIcon />}
           </PlayButton>
+          <InnerOverlay />
         </Overlay>
       </Player>
     );
