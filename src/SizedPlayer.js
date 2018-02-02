@@ -12,6 +12,7 @@ const parseAspectRatio = (aspectRatio) => {
   const ratioArr = aspectRatio.split(':');
   const ratio = ratioArr.map(str => Number(str));
   if (ratio.length !== 2 || Number.isNaN(ratio[0]) || Number.isNaN(ratio[1])) {
+    // eslint-disable-next-line
     console.warn('Invalid aspect ratio supplied to react-simple-video-player, defaulting to 16:9');
     return [16, 9];
   }

@@ -81,7 +81,7 @@ export default class VideoPlayer extends PureComponent {
     if (!this.state.playing) {
       this.setState({ overlayShown: true });
       return;
-    };
+    }
 
     this.setState({ overlayShown: false });
   };
