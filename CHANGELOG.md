@@ -1,3 +1,8 @@
+# Version 0.2.1
+Released 2018-02-02
+
+- Added glamorous support
+
 # Version 0.2.0
 Released 2018-02-02
 
