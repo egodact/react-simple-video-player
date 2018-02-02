@@ -1,5 +1,5 @@
 # Version 0.1.1
-Released 2018-02-2
+Released 2018-02-02
 
 - Added README content
 
