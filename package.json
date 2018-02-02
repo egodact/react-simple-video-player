@@ -12,9 +12,11 @@
   },
   "license": "MIT",
   "keywords": [
-    "tradingview",
-    "tradingview widget",
-    "tradingview widget react"
+    "video player",
+    "material video player",
+    "material design video player",
+    "simple video player",
+    "react video player"
   ],
   "scripts": {
     "build": "webpack --config webpack.config.babel.js",
@@ -24,9 +26,11 @@
     "lint": "eslint ./src"
   },
   "peerDependencies": {
+    "glamorous": "^4.11.4",
     "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-player": "^1.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -39,10 +43,13 @@
     "clean-webpack-plugin": "^0.1.16",
     "eslint": "^4.9.0",
     "eslint-plugin-react": "^7.4.0",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.11.4",
     "jest": "^21.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "next",
+    "react-player": "^1.1.1",
     "webpack": "^3.8.1"
   }
 }
