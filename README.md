@@ -12,7 +12,7 @@ A simple, material design video player component for React.
 import VideoPlayer from 'react-simple-video-player';
 
 const App = () => (
-  <VideoPlayer url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" />
+  <VideoPlayer url="/video.mp4" />
 );
 ```
 
@@ -22,7 +22,7 @@ import VideoPlayer from 'react-simple-video-player';
 
 const App = () => (
   <VideoPlayer
-    url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    url="/video.mp4"
     poster="/myPoster.png"
     width={400}
     height={300}
@@ -32,12 +32,12 @@ const App = () => (
 ```
 
 ## Props
-* = Required
+`*` = Required
 
 Prop | Description | default
 ---- | ----------- | -------
 `url*`| Url of the video file to play |
-`poster*` | Url of the image to use as poster for the video |
+`poster` | Url of the image to use as poster for the video |
 `width` | Width of the video player | `640`
 `height` | Height of the video player | `360`
 `autosize` | If set to true, the video player will become 100% of the parent width and 100% of the parent height (if the parent does not have a height, the video player will automatically become the right height). `autosize` overrides the given `width` and `height` | `false`
@@ -50,7 +50,7 @@ The `aspectRatio` prop can be used to automatically give the video player the co
 For example, in the following scenario:
 ```javascript
 <VideoPlayer
-  url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+  url="/video.mp4"
   width={400}
   aspectRatio="4:3"
 />
@@ -60,7 +60,7 @@ the video player would automatically become 300px high.
 In the following scenario:
 ```javascript
 <VideoPlayer
-  url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+  url="/video.mp4"
   height={300}
   aspectRatio="4:3"
 />
