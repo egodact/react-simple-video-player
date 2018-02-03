@@ -19,7 +19,7 @@ export const parseAspectRatio = (aspectRatio) => {
   return ratio;
 };
 
-const SizedPlayer = ({ url, poster, playing, ...props }) => {
+const SizedPlayer = ({ url, poster, playing, loop, ...props }) => {
   const { ...options } = props;
   const aspectRatio = parseAspectRatio(options.aspectRatio);
 
@@ -48,6 +48,7 @@ const SizedPlayer = ({ url, poster, playing, ...props }) => {
         url={url}
         config={config}
         playing={playing}
+        loop={loop}
         width="100%"
         height="100%"
       />
@@ -62,6 +63,7 @@ SizedPlayer.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   autosize: PropTypes.bool,
+  loop: PropTypes.bool,
   aspectRatio: PropTypes.string
 };
 

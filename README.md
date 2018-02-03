@@ -42,6 +42,7 @@ Prop | Description | default
 `height` | Height of the video player | `360`
 `autosize` | If set to true, the video player will become 100% of the parent width and 100% of the parent height (if the parent does not have a height, the video player will automatically become the right height). `autosize` overrides the given `width` and `height` | `false`
 `autoplay` | If set to true, the video will automatically play | `false`
+`loop` | If set to true, the video will loop | `false`
 `aspectRatio` | The aspect ratio of the video (see explanation below). | `16:9`
 
 #### Usage of the `aspectRatio` prop

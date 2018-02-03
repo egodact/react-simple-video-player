@@ -49,10 +49,12 @@ export default class VideoPlayer extends PureComponent {
     height: PropTypes.number,
     autosize: PropTypes.bool,
     autoplay: PropTypes.bool,
+    loop: PropTypes.bool,
     aspectRatio: PropTypes.string
   };
 
   static defaultProps = {
+    loop: false,
     autoplay: false
   };
 
