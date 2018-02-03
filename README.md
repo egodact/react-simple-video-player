@@ -50,23 +50,21 @@ The `aspectRatio` prop can be used to automatically give the video player the co
 
 For example, in the following scenario:
 ```javascript
-<VideoPlayer
-  url="/video.mp4"
-  width={400}
-  aspectRatio="4:3"
-/>
+<VideoPlayer url="/video.mp4" width={400} aspectRatio="4:3" />
 ```
 the video player would automatically become 300px high.
 
 In the following scenario:
 ```javascript
-<VideoPlayer
-  url="/video.mp4"
-  height={300}
-  aspectRatio="4:3"
-/>
+<VideoPlayer url="/video.mp4" height={300} aspectRatio="4:3" />
 ```
 the video player would automatically become 400px wide.
+
+In the following scenario:
+```javascript
+<VideoPlayer url="/video.mp4" aspectRatio="4:3" />
+```
+the video player would automatically become 480px high (since the width defaults to 640px).
 
 Notice that when an invalid `aspectRatio` is given, it'll be ignored.
 
