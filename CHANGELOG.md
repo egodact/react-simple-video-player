@@ -1,3 +1,9 @@
+# Version 1.0.0
+Released 2018-02-03
+
+- Updated README
+- Added support for video looping
+
 # Version 0.2.2
 Released 2018-02-02
 
